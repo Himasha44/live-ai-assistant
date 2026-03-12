@@ -24,13 +24,13 @@ User → Web UI → Node.js → Python AI model → Response → Web UI
 ## Run the Project
 
 Start the AI model:
--cd ai-model
--python app.py
+- cd ai-model
+- python app.py
 
 
 Start the Node server:
--npm start
+- npm start
 
 
 Open:
--http://localhost:3000
+- http://localhost:3000
