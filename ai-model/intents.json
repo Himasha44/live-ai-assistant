@@ -1,0 +1,48 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["Hi", "Hello", "Hey", "Good morning", "Good evening"],
+      "responses": ["Hello!", "Hi there!", "Hey! How can I help you?"]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "Goodbye", "See you", "Talk to you later"],
+      "responses": ["Goodbye!", "See you later!", "Bye!"]
+    },
+    {
+      "tag": "help",
+      "patterns": [
+        "What can you do?",
+        "Help me",
+        "How do you work?",
+        "What are your features?"
+      ],
+      "responses": [
+        "I can answer simple questions, do calculations, remember your name, and explain topics."
+      ]
+    },
+    {
+      "tag": "name_query",
+      "patterns": [
+        "What is my name?",
+        "Do you know my name?",
+        "Tell me my name"
+      ],
+      "responses": [
+        "Let me check what you told me earlier."
+      ]
+    },
+    {
+      "tag": "name_store",
+      "patterns": [
+        "My name is Nethmi",
+        "I am Nethmi",
+        "Call me Nethmi"
+      ],
+      "responses": [
+        "Nice to meet you!"
+      ]
+    }
+  ]
+}
