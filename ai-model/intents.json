@@ -62,6 +62,23 @@
         "I am a simple AI assistant designed to answer questions and help with tasks.",
         "I'm an AI chatbot created to assist with conversations and simple problem solving."
       ]
+    },
+    {
+      "tag": "how_are_you",
+      "patterns": [
+        "How are you",
+        "How are you doing",
+        "Are you okay",
+        "How's it going",
+        "How do you feel",
+        "Are you fine",
+        "How have you been"
+      ],
+      "responses": [
+        "I'm doing well and ready to help!",
+        "I'm great, thanks for asking. How can I help you?",
+        "I'm fine and ready for your questions."
+      ]
     }
   ]
 }
