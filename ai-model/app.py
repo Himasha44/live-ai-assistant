@@ -31,7 +31,14 @@ def save_memory(memory):
 
 def predict_intent(user_input):
     X = vectorizer.transform([user_input])
-    prediction = model.predict(X)[0]
+    probabilities = model.predict_proba(X)[0]
+
+    max_prob = max(probabilities)
+    prediction = model.classes_[probabilities.argmax()]
+
+    if max_prob < 0.40:
+        return "unknown"
+
     return prediction
 
 def get_response(intent_tag):
@@ -106,3 +113,12 @@ def predict():
 
 if __name__ == "__main__":
     app.run(port=5000, debug=True)
+
+
+    
+#cd "C:\Users\nethm\Desktop\Projects\AI Assistant\ai-model"
+#python app.py
+
+
+#cd "C:\Users\nethm\Desktop\Projects\AI Assistant"
+#npm start
