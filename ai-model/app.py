@@ -86,6 +86,9 @@ def get_name(memory):
 def check_rules(user_input, memory):
     lower_input = user_input.lower()
 
+    if lower_input in ["how are you", "how are you doing", "how are you today", "are you okay", "how's it going", "how is it going"]:
+        return "I'm doing well, thank you for asking! How can I help you today?"
+
     name_response = store_name(user_input, memory)
     if name_response:
         return name_response
