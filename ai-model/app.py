@@ -21,8 +21,14 @@ MEMORY_FILE = "chat_memory.json"
 
 def load_memory():
     if os.path.exists(MEMORY_FILE):
-        with open(MEMORY_FILE, "r", encoding="utf-8") as file:
-            return json.load(file)
+        try:
+            with open(MEMORY_FILE, "r", encoding="utf-8") as file:
+                content = file.read().strip()
+                if not content:
+                    return {}
+                return json.loads(content)
+        except (json.JSONDecodeError, FileNotFoundError):
+            return {}
     return {}
 
 def save_memory(memory):
@@ -36,7 +42,11 @@ def predict_intent(user_input):
     max_prob = max(probabilities)
     prediction = model.classes_[probabilities.argmax()]
 
-    if max_prob < 0.40:
+    print("User input:", user_input)
+    print("Predicted intent:", prediction)
+    print("Confidence:", max_prob)
+
+    if max_prob < 0.20:
         return "unknown"
 
     return prediction
@@ -55,7 +65,7 @@ def calculate_expression(user_input):
             try:
                 result = eval(expr)
                 return f"The answer is {result}"
-            except:
+            except Exception:
                 return None
     return None
 
@@ -97,28 +107,27 @@ def check_rules(user_input, memory):
 
 @app.route("/predict", methods=["POST"])
 def predict():
-    data = request.get_json()
-    user_input = data.get("message", "")
+    try:
+        data = request.get_json(silent=True) or {}
+        user_input = str(data.get("message", "")).strip()
 
-    memory = load_memory()
+        if not user_input:
+            return jsonify({"answer": "Please type a message."}), 400
 
-    rule_response = check_rules(user_input, memory)
-    if rule_response:
-        return jsonify({"answer": rule_response})
+        memory = load_memory()
 
-    intent = predict_intent(user_input)
-    response = get_response(intent)
+        rule_response = check_rules(user_input, memory)
+        if rule_response:
+            return jsonify({"answer": rule_response})
 
-    return jsonify({"answer": response, "intent": intent})
+        intent = predict_intent(user_input)
+        response = get_response(intent)
+
+        return jsonify({"answer": response, "intent": intent})
+
+    except Exception as e:
+        print("Python error:", str(e))
+        return jsonify({"error": str(e)}), 500
 
 if __name__ == "__main__":
     app.run(port=5000, debug=True)
-
-
-    
-#cd "C:\Users\nethm\Desktop\Projects\AI Assistant\ai-model"
-#python app.py
-
-
-#cd "C:\Users\nethm\Desktop\Projects\AI Assistant"
-#npm start

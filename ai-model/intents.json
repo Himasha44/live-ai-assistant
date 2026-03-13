@@ -68,17 +68,20 @@
       "patterns": [
         "How are you",
         "How are you doing",
+        "How are you today",
+        "How have you been",
         "Are you okay",
+        "Are you doing well",
+        "How is it going",
         "How's it going",
         "How do you feel",
-        "Are you fine",
-        "How have you been"
+        "Are you fine"
       ],
       "responses": [
-        "I'm doing well and ready to help!",
-        "I'm great, thanks for asking. How can I help you?",
-        "I'm fine and ready for your questions."
+        "I'm doing well, thank you for asking!",
+        "I'm great and ready to help you.",
+        "I'm doing fine. How can I help you today?"
       ]
     }
-  ]
+  ]   
 }
