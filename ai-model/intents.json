@@ -43,6 +43,25 @@
       "responses": [
         "Nice to meet you!"
       ]
+    },
+    {
+      "tag": "bot_identity",
+      "patterns": [
+        "Who are you",
+        "What are you",
+        "What is your name",
+        "Tell me about yourself",
+        "Are you a robot",
+        "Are you an AI",
+        "Introduce yourself",
+        "Who made you",
+        "What kind of assistant are you"
+      ],
+      "responses": [
+        "I am your AI assistant built with Node.js and Python.",
+        "I am a simple AI assistant designed to answer questions and help with tasks.",
+        "I'm an AI chatbot created to assist with conversations and simple problem solving."
+      ]
     }
   ]
 }
