@@ -82,6 +82,24 @@
         "I'm great and ready to help you.",
         "I'm doing fine. How can I help you today?"
       ]
+    },
+    {
+      "tag": "capabilities",
+      "patterns": [
+        "Can you answer questions",
+        "Can you solve maths",
+        "Can you remember things",
+        "Can you tell the time",
+        "Can you explain programming",
+        "Can you answer study questions",
+        "What tasks can you do",
+        "What kind of questions can I ask"
+      ],
+      "responses": [
+        "Yes, I can answer many simple questions, do calculations, remember your name, and explain basic concepts.",
+        "You can ask me math, date, time, study, and basic programming questions.",
+        "I can handle several assistant tasks like answering simple questions and remembering information."
+      ]
     }
   ]   
 }
