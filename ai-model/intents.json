@@ -100,6 +100,24 @@
         "You can ask me math, date, time, study, and basic programming questions.",
         "I can handle several assistant tasks like answering simple questions and remembering information."
       ]
+    },
+    {
+      "tag": "study_help",
+      "patterns": [
+        "Can you help me study",
+        "Help me with studying",
+        "I need study help",
+        "Can you explain a lesson",
+        "Can you teach me",
+        "Help me understand a topic",
+        "Explain a concept to me",
+        "Can you help with revision"
+      ],
+      "responses": [
+        "Yes, I can help explain topics and support your studying.",
+        "Of course. Ask me the topic and I will try to explain it clearly.",
+        "I can help you study by explaining concepts and answering questions."
+      ]
     }
   ]   
 }
