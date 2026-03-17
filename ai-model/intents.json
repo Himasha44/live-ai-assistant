@@ -136,6 +136,23 @@
         "I can help with coding basics, simple debugging, and explanations.",
         "Ask me your programming question and I will do my best to help."
       ]
+    },
+    {
+      "tag": "python_question",
+      "patterns": [
+        "What is Python",
+        "Explain Python",
+        "Tell me about Python",
+        "What is Python programming",
+        "What is Python used for",
+        "Why use Python",
+        "Define Python"
+      ],
+      "responses": [
+        "Python is a high-level programming language known for its simple syntax and wide use in web development, automation, data science, and AI.",
+        "Python is a versatile programming language that is easy to learn and widely used in many fields.",
+        "Python is a popular programming language used for building software, automating tasks, and working with data."
+      ]
     }
   ]   
 }
