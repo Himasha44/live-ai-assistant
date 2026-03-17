@@ -118,6 +118,24 @@
         "Of course. Ask me the topic and I will try to explain it clearly.",
         "I can help you study by explaining concepts and answering questions."
       ]
+    },
+    {
+      "tag": "programming_help",
+      "patterns": [
+        "Can you help with programming",
+        "Help me code",
+        "Can you explain code",
+        "I need coding help",
+        "Explain programming",
+        "Can you help with software development",
+        "Help me debug",
+        "Can you explain this code"
+      ],
+      "responses": [
+        "Yes, I can help explain basic programming concepts and code.",
+        "I can help with coding basics, simple debugging, and explanations.",
+        "Ask me your programming question and I will do my best to help."
+      ]
     }
   ]   
 }
