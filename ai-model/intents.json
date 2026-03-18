@@ -153,6 +153,22 @@
         "Python is a versatile programming language that is easy to learn and widely used in many fields.",
         "Python is a popular programming language used for building software, automating tasks, and working with data."
       ]
+    },
+    {
+      "tag": "javascript_question",
+      "patterns": [
+        "What is JavaScript",
+        "Explain JavaScript",
+        "Tell me about JavaScript",
+        "Define JavaScript",
+        "What is JavaScript used for",
+        "Why use JavaScript"
+      ],
+      "responses": [
+        "JavaScript is a programming language mainly used to make web pages interactive.",
+        "JavaScript is widely used in web development for frontend and backend applications.",
+        "JavaScript helps developers add dynamic behavior to websites and applications."
+      ]
     }
   ]   
 }
