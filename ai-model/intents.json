@@ -169,6 +169,21 @@
         "JavaScript is widely used in web development for frontend and backend applications.",
         "JavaScript helps developers add dynamic behavior to websites and applications."
       ]
+    },
+    {
+      "tag": "ai_question",
+      "patterns": [
+        "What is AI",
+        "Explain artificial intelligence",
+        "Define AI",
+        "Tell me about AI",
+        "What is artificial intelligence"
+      ],
+      "responses": [
+        "Artificial intelligence is the field of creating systems that can perform tasks requiring human-like intelligence.",
+        "AI involves machines learning, reasoning, and solving problems.",
+        "Artificial intelligence helps computers perform tasks such as recognition, prediction, and decision-making."
+      ]
     }
   ]   
 }
